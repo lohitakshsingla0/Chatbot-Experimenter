@@ -29,6 +29,13 @@ if (!fs.existsSync(experimentsFilePath)) {
     fs.writeFileSync(experimentsFilePath, JSON.stringify({ experiments: [] }, null, 2));
 }
 
+
+
+//Test
+app.get('/', (req, res) => {
+  res.send('Hello World!'); // Example route
+});
+
 // Routes for different chat interfaces
 app.get('/comparison/full-screen', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'comparison', 'full-screen', 'index.html'));
@@ -101,7 +108,7 @@ let currentContext = {
     currentContext.action = "track";
     return botResponse;
   }
-  
+
   function cancelOrder() {
     let botResponse = "You have the following orders:<br>";
     orders.filter(order => order.status === 'Processing' || order.status === 'Shipped').forEach(order => {
@@ -111,7 +118,7 @@ let currentContext = {
     currentContext.action = "cancel";
     return botResponse;
   }
-  
+
   function returnOrder() {
     let botResponse = "You have the following orders:<br>";
     orders.filter(order => order.status === 'Processing' || order.status === 'Shipped').forEach(order => {
@@ -121,7 +128,7 @@ let currentContext = {
     currentContext.action = "return";
     return botResponse;
   }
-  
+
   function checkRefundStatus() {
     let botResponse = "You have the following orders which are cancelled or returned and available for refund status:<br>";
     orders.filter(order => order.status === 'Cancelled' || order.status === 'Returned').forEach(order => {
@@ -131,7 +138,7 @@ let currentContext = {
     currentContext.action = "refund";
     return botResponse;
   }
-  
+
 //   function exchangeOrder() {
 //     let botResponse = "You have the following orders:<br>";
 //     orders.forEach(order => {
@@ -144,7 +151,7 @@ let currentContext = {
 
   function handleOrderAction(order) {
     let botResponse = "";
-  
+
     switch (currentContext.action) {
       case "track":
         botResponse = `Order ID: ${order.id} - Status: ${order.status} - Estimated Delivery: ${order.delivery}`;
@@ -166,12 +173,12 @@ let currentContext = {
     }
     return botResponse;
   }
-  
+
   // Process message function
   function processMessage(message) {
     const lowerCaseMessage = message.toLowerCase();
     let botResponse = "I'm not sure how to respond to that. Could you please clarify your request?";
-  
+
     if (lowerCaseMessage.includes("track")) {
       botResponse = trackOrder();
     } else if (lowerCaseMessage.includes("cancel")) {
@@ -195,7 +202,7 @@ let currentContext = {
     } else if (lowerCaseMessage.includes("help")) {
       botResponse = "I can help you with tracking orders, checking statuses, cancellations, returns, refunds,. What do you need assistance with?";
     } else if (currentContext.action) {
-      console.log("inside current Context")  
+      console.log("inside current Context")
       const orderId = message.match(/\b\d{5}\b/);
       console.log("orderID:" + orderId)
       if (orderId) {
@@ -268,7 +275,7 @@ app.get('/experiments', (req, res) => {
 app.delete('/delete-experiment/:title', (req, res) => {
   const { title } = req.params;
   let experiments = JSON.parse(fs.readFileSync(experimentsFilePath, 'utf8'));
-  
+
   const experimentIndex = experiments.experiments.findIndex(exp => exp.title === title);
   if (experimentIndex !== -1) {
       experiments.experiments.splice(experimentIndex, 1);
