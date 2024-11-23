@@ -1,12 +1,7 @@
 {
   "name": "chatbots",
   "version": "1.0.0",
-  "builds": [
-        { "src": "server.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-        { "src": "/admin", "dest": "server.js" }
-    ],
+
   "main": "index.js",
 
 

@@ -1,10 +1,6 @@
 {
     "version": 2,
     "routes": [
-        { "src": "/admin", "dest": "/public/admin/index.html" },
-        { "src": "/ai", "dest": "/public/ai/index.html" },
-        { "src": "/comparison", "dest": "/public/comparison/index.html" },
-        { "src": "/dark-pattern", "dest": "/public/dark-pattern/index.html" },
-        { "src": "/(.*)", "dest": "/public/index.html" }
+        { "src": "/(.*)", "dest": "/public/$1" }
     ]
 }
