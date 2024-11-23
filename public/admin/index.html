@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimenter Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading text-white">Experimenter Dashboard</div>
+            <hr class="sidebar-separator">
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('homepage')">Homepage</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('sendLinks')">Send Users Experiment Links</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('addUsecases')">Add Use Cases</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('viewFeedback')">View Feedback</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('seeRepositories')">See Database Repositories</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white" onclick="showSection('deleteExperiment')">Delete Experiment</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper" class="flex-grow-1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="ml-auto d-flex align-items-center">
+                    <span class="mr-2">Hello Experimenter</span>
+                    <img src="https://via.placeholder.com/30" alt="User Icon" class="rounded-circle user-icon">
+                </div>
+            </nav>
+
+            <div class="container-fluid mt-4">
+                <!-- Homepage Section -->
+                <div id="homepage" class="section active">
+                    <div class="jumbotron bg-primary text-white">
+                        <h1 class="display-4">Welcome to the Experimenter Dashboard</h1>
+                        <p class="lead">This dashboard allows you to manage and distribute experimental setups efficiently.</p>
+                        <hr class="my-4">
+                        <p>Use the sidebar to navigate through different sections of the dashboard. If this is your first time, please read the instructions below to understand the functionalities.</p>
+                    </div>
+                    <div class="card shadow p-4">
+                        <h3>Instructions</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">To send experiment links to users, go to the "Send Users Experiment Links" section.</li>
+                            <li class="list-group-item">To add new use cases, go to the "Add Use Cases" section.</li>
+                            <li class="list-group-item">To view feedback from users, go to the "View Feedback" section.</li>
+                            <li class="list-group-item">To see database repositories, go to the "See Database Repositories" section.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="sendLinks" class="section">
+                    <h2 class="mt-4">Send Users Experiment Links</h2>
+                    <div class="card shadow p-4">
+                        <form id="experimentForm">
+                            <div class="form-group">
+                                <label for="experimentTopic">Select Experiment Topic</label>
+                                <select class="form-control" id="experimentTopic" required>
+                                    <!-- Options will be populated dynamically -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Available Chatbots</label>
+                                <ul id="chatbotList" class="list-group">
+                                    <!-- Chatbot links will be populated dynamically -->
+                                </ul>
+                            </div>
+                            <div class="form-group">
+                                <label for="uploadFile">Upload Excel File</label>
+                                <input type="file" class="form-control" id="uploadFile" accept=".xlsx, .xls" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailList">Emails</label>
+                                <textarea class="form-control" id="emailList" rows="5" readonly></textarea>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block" onclick="processAndSendEmails()">Send</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Add Use Cases Section -->
+                <div id="addUsecases" class="section">
+                    <h2 class="mt-4">Add Use Cases</h2>
+                    <div class="card shadow p-4">
+                        <form id="usecaseForm">
+                            <div class="form-group">
+                                <label for="usecaseTitle">Experiment Title</label>
+                                <input type="text" class="form-control" id="usecaseTitle" placeholder="Enter experiment title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="numChatbots">Number of Chatbots</label>
+                                <input type="number" class="form-control" id="numChatbots" placeholder="Enter number of chatbots" required>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block" onclick="generateChatbotFields()">Generate Chatbot Fields</button>
+                        </form>
+                    </div>
+                    <div id="chatbotFieldsContainer" class="mt-4"></div>
+                </div>
+
+                <div id="viewFeedback" class="section">
+                    <h2 class="mt-4">View Feedback</h2>
+                    <p>Here you can view feedback from users.</p>
+                </div>
+                <div id="seeRepositories" class="section">
+                    <h2 class="mt-4">See Database Repositories</h2>
+                    <p>Here you can see the database repositories.</p>
+                </div>
+
+                <!-- Delete Experiment Section -->
+                <div id="deleteExperiment" class="section">
+                    <h2 class="mt-4">Delete Experiment</h2>
+                    <div class="card shadow p-4">
+                        <form id="deleteExperimentForm">
+                            <div class="form-group">
+                                <label for="deleteExperimentTopic">Select Experiment to Delete</label>
+                                <select class="form-control" id="deleteExperimentTopic" required>
+                                    <!-- Options will be populated dynamically -->
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-danger btn-block" onclick="deleteExperiment()">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap and necessary plugins -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container-fluid {
+    height: calc(100% - 40px); /* Adjust the height to account for the margin */
+    margin: 2px; /* Add margin around the container */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.row {
+    height: 100%;
+    overflow: hidden;
+    margin-left: 10px; /* Add left margin to the row */
+}
+
+.sidebar {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sidebar-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* #chatListContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+} */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #e9ecef;
+}
+
+.chat-footer {
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+.input-group {
+    display: flex;
+}
+
+.input-group .form-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+}
+
+.input-group .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.message.user {
+    align-items: flex-end;
+}
+
+.message.bot {
+    align-items: flex-start;
+}
+
+.message-text {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.message.user .message-text {
+    background-color: #007bff;
+    color: #fff;
+    border-bottom-right-radius: 0;
+}
+
+.message.bot .message-text {
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 0;
+}
+
+.list-group-item.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.close-btn {
+    margin-left: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.chat-container .user, .chat-box .bot {
+    margin: 10px 0;
+  }
+  
+.chat-container .bot img {
+    display: block;
+    margin-top: 10px;
+    width: 200px;
+    height: 250px;
+  }

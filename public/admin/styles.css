@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 250px;
+    transition: margin 0.25s ease-out;
+}
+
+#page-content-wrapper {
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin 0.25s ease-out;
+}
+
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    background: #343a40;
+}
+
+.list-group-item-action {
+    cursor: pointer;
+}
+
+.list-group-item {
+    padding: 0.75rem 1.25rem;
+    background-color: #343a40;
+    border: none;
+    color: white;
+}
+
+.list-group-item:hover,
+.list-group-item:focus {
+    background-color: #495057;
+    color: white;
+}
+
+hr.sidebar-separator {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0 1.25rem 0;
+}
+
+.navbar {
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #343a40;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.container-fluid {
+    padding: 2rem;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.jumbotron .display-4 {
+    font-weight: 300;
+}
+
+.jumbotron .lead {
+    font-size: 1.25rem;
+}
+
+.jumbotron hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card.shadow.p-4 {
+    color: #333; /* Ensure text within card is dark */
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.list-group {
+    color: #333; /* Ensure text within list group is dark */
+}
+
+.list-group-item {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    color: #333; /* Ensure text color is dark */
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
