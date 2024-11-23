@@ -1,7 +1,15 @@
 {
   "name": "chatbots",
   "version": "1.0.0",
+  "builds": [
+        { "src": "server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+        { "src": "/(.*)", "dest": "server.js" }
+    ],
   "main": "index.js",
+
+
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
