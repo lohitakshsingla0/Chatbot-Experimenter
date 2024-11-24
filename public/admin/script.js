@@ -77,7 +77,7 @@ document.getElementById('uploadFile').addEventListener('change', function() {
         const firstSheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[firstSheetName];
         const jsonSheet = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-        
+
         const emailColumnIndex = jsonSheet[0].indexOf('email');
         if (emailColumnIndex === -1) {
             alert("Email column not found in the Excel file.");
@@ -104,44 +104,86 @@ function processAndSendEmails() {
         .then(data => {
             const experiment = data.experiments.find(exp => exp.title === experimentTopic);
             const selectedLinks = experiment.chatbots.map(chatbot => chatbot.link);
+            console.log(emails)
+            console.log(selectedLinks)
             distributeChatbotsAndSendEmails(emails, selectedLinks);
         });
 }
 
 function distributeChatbotsAndSendEmails(emails, selectedLinks) {
-    // Shuffle the emails
+    // Shuffle emails to distribute chatbots randomly
     emails = emails.sort(() => Math.random() - 0.5);
 
-    // Distribute chatbots equally
+    // Distribute chatbots equally among users
     emails.forEach((email, index) => {
         const selectedLink = selectedLinks[index % selectedLinks.length];
 
-        // This is a placeholder for the actual email sending functionality
+        // Log the email and link for debugging
         console.log(`Sending email to ${email} with the link: ${selectedLink}`);
 
-        // Optionally, you can use a backend service to send the email
-        // Example:
+        // Send email using the backend API
         fetch('/send-email', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 email: email,
-                link: selectedLink
+                link: selectedLink,
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    console.log(`Email sent to ${email}`);
+                } else {
+                    console.log(`Failed to send email to ${email}`);
+                }
             })
-        }).then(response => response.json())
-          .then(data => {
-              if (data.success) {
-                  console.log(`Email sent to ${email}`);
-              } else {
-                  console.log(`Failed to send email to ${email}`);
-              }
-          });
+            .catch((error) => {
+                console.error(`Error sending email to ${email}:`, error);
+            });
     });
 
-    alert("Emails have been sent successfully.");
+    alert('Emails have been sent successfully.');
 }
+
+
+
+// function distributeChatbotsAndSendEmails(emails, selectedLinks) {
+//     // Shuffle the emails
+//     emails = emails.sort(() => Math.random() - 0.5);
+
+//     // Distribute chatbots equally
+//     emails.forEach((email, index) => {
+//         const selectedLink = selectedLinks[index % selectedLinks.length];
+
+//         // This is a placeholder for the actual email sending functionality
+//         console.log(`Sending email to ${email} with the link: ${selectedLink}`);
+
+//         // Optionally, you can use a backend service to send the email
+//         // Example:
+//         fetch('/send-email', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({
+//                 email: email,
+//                 link: selectedLink
+//             })
+//         }).then(response => response.json())
+//           .then(data => {
+//               if (data.success) {
+//                   console.log(`Email sent to ${email}`);
+//               } else {
+//                   console.log(`Failed to send email to ${email}`);
+//               }
+//           });
+//     });
+
+//     alert("Emails have been sent successfully.");
+// }
 
 function generateChatbotFields() {
     const numChatbots = document.getElementById('numChatbots').value;

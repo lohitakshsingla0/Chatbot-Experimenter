@@ -16,13 +16,69 @@ app.use(bodyParser.json());
 const experimentsFilePath = path.join(__dirname, 'experiments.json');
 
 // Set up Nodemailer transporter
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//       user: 'chatbotexperimenter@gmail.com', // Replace with your email
+//       pass: 'Experimenter@123' // Replace with your email password or app password
+//   }
+// });
+
+// app.post('/send-email', (req, res) => {
+//   const { email, link } = req.body;
+//   emailTest = 'sharyupatilvit@gmail.com'
+
+//   const mailOptions = {
+//       from: 'chatbotexperimenter@gmail.com', // Replace with your email
+//       to: emailTest,
+//       subject: 'Experiment Link',
+//       text: `Please try the following link: ${link}`
+//   };
+
+//   transporter.sendMail(mailOptions, (error, info) => {
+//       if (error) {
+//           return res.json({ success: false, message: error.message });
+//       }
+//       res.json({ success: true, message: 'Email sent: ' + info.response });
+//   });
+// });
+
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-      user: 'chatbotexperimenter@gmail.com', // Replace with your email
-      pass: 'Experimenter@123' // Replace with your email password or app password
-  }
+      user: 'lohitakshsingla49@gmail.com', // Replace with sender email
+      pass: 'usww qzfc qteu oxwq',          // Replace with your App Password
+  },
 });
+
+
+app.post('/send-email', (req, res) => {
+  const { email, link } = req.body;
+
+  // Validate request data
+  if (!email || !link) {
+      return res.status(400).json({ success: false, error: 'Email and link are required.' });
+  }
+
+  // Configure email content
+  const mailOptions = {
+      from: 'lohitakshsingla49@gmail.com', // Sender email
+      to: email,                           // Recipient email
+      subject: 'Chatbot Interface Test Invitation',
+      text: `Dear User,\n\nYou have been selected to test the following chatbot interface:\n\n${link}\n\nThank you for your participation!\n\nBest regards,\nThe Experiment Team`,
+  };
+
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          console.error('Error sending email:', error);
+          return res.status(500).json({ success: false, error: 'Failed to send email.' });
+      }
+      console.log('Email sent successfully:', info.response);
+      res.json({ success: true, message: 'Email sent successfully.' });
+  });
+});
+
 
 // Ensure the experiments.json file exists
 if (!fs.existsSync(experimentsFilePath)) {
@@ -292,25 +348,6 @@ app.delete('/delete-experiment/:title', (req, res) => {
   } else {
       res.json({ success: false, message: 'Experiment not found' });
   }
-});
-
-app.post('/send-email', (req, res) => {
-  const { email, link } = req.body;
-  emailTest = 'sharyupatilvit@gmail.com'
-
-  const mailOptions = {
-      from: 'chatbotexperimenter@gmail.com', // Replace with your email
-      to: emailTest,
-      subject: 'Experiment Link',
-      text: `Please try the following link: ${link}`
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-          return res.json({ success: false, message: error.message });
-      }
-      res.json({ success: true, message: 'Email sent: ' + info.response });
-  });
 });
 
 // Start server
