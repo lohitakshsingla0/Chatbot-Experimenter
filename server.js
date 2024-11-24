@@ -33,7 +33,7 @@ if (!fs.existsSync(experimentsFilePath)) {
 
 //Test
 app.get('/', (req, res) => {
-  res.send('Hello World!'); // Example route
+  res.sendFile(path.join(__dirname, 'public', 'admin', 'index.html'));
 });
 
 // Routes for different chat interfaces
