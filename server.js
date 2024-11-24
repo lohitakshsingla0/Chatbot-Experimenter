@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 // Store experiments in memory for simplicity (you can use a database or file for persistence)
-const experimentsFilePath = path.join(__dirname, 'experiments.json');
+const experimentsFilePath = path.join(__dirname, 'public/experiments.json');
 console.log(experimentsFilePath)
 // Set up Nodemailer transporter
 // const transporter = nodemailer.createTransport({
