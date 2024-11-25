@@ -14,7 +14,8 @@ app.use(bodyParser.json());
 
 // Store experiments in memory for simplicity (you can use a database or file for persistence)
 // const experimentsFilePath = path.join(__dirname, 'experiments.json');
-const experimentsFilePath = path.join(__dirname,'public', 'data', 'experiments.json');
+// const experimentsFilePath = path.join(__dirname,'data', 'experiments.json');
+const experimentsFilePath = path.join(process.cwd(), 'data', 'experiments.json');
 
 console.log('Experiments file absolute path:', experimentsFilePath);
 // Set up Nodemailer transporter
@@ -334,10 +335,25 @@ app.post('/process-message', (req, res) => {
 // });
 
 
+// app.get('/experiments', (req, res) => {
+//   try {
+//     const experimentsData = fs.readFileSync(experimentsFilePath, 'utf8');
+//     const experiments = JSON.parse(experimentsData);
+//     res.json(experiments);
+//   } catch (error) {
+//     console.error('Error reading experiments.json:', error);
+//     res.status(500).json({ success: false, message: 'Error reading experiments file.' });
+//   }
+// });
+
+
 app.get('/experiments', (req, res) => {
   try {
-    const experimentsData = fs.readFileSync(experimentsFilePath, 'utf8');
-    const experiments = JSON.parse(experimentsData);
+    // Use process.cwd() to dynamically resolve the path
+    const data = fs.readFileSync(experimentsFilePath, 'utf8');
+    const experiments = JSON.parse(data);
+
+    // Respond with the JSON data
     res.json(experiments);
   } catch (error) {
     console.error('Error reading experiments.json:', error);
