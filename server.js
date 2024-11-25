@@ -19,32 +19,7 @@ const experimentsFilePath = path.join(process.cwd(), 'data', 'experiments.json')
 
 console.log('Experiments file absolute path:', experimentsFilePath);
 // Set up Nodemailer transporter
-// const transporter = nodemailer.createTransport({
-//   service: 'gmail',
-//   auth: {
-//       user: 'chatbotexperimenter@gmail.com', // Replace with your email
-//       pass: 'Experimenter@123' // Replace with your email password or app password
-//   }
-// });
 
-// app.post('/send-email', (req, res) => {
-//   const { email, link } = req.body;
-//   emailTest = 'sharyupatilvit@gmail.com'
-
-//   const mailOptions = {
-//       from: 'chatbotexperimenter@gmail.com', // Replace with your email
-//       to: emailTest,
-//       subject: 'Experiment Link',
-//       text: `Please try the following link: ${link}`
-//   };
-
-//   transporter.sendMail(mailOptions, (error, info) => {
-//       if (error) {
-//           return res.json({ success: false, message: error.message });
-//       }
-//       res.json({ success: true, message: 'Email sent: ' + info.response });
-//   });
-// });
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
