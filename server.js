@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 // const experimentsFilePath = path.join(__dirname, 'experiments.json');
 const experimentsFilePath = path.join(__dirname, 'data', 'experiments.json');
 
-console.log(experimentsFilePath)
+console.log('Experiments file absolute path:', experimentsFilePath);
 // Set up Nodemailer transporter
 // const transporter = nodemailer.createTransport({
 //   service: 'gmail',
@@ -333,9 +333,9 @@ app.post('/process-message', (req, res) => {
 
 // });
 
+
 app.get('/experiments', (req, res) => {
   try {
-    // Read the JSON file synchronously (can also use fs.promises for async)
     const experimentsData = fs.readFileSync(experimentsFilePath, 'utf8');
     const experiments = JSON.parse(experimentsData);
     res.json(experiments);
@@ -344,6 +344,7 @@ app.get('/experiments', (req, res) => {
     res.status(500).json({ success: false, message: 'Error reading experiments file.' });
   }
 });
+
 
 app.delete('/delete-experiment/:title', (req, res) => {
   const { title } = req.params;
