@@ -325,12 +325,24 @@ app.post('/process-message', (req, res) => {
     }
 });
 
-app.get('/experiments', (req, res) => {
-  const experiments = JSON.parse(fs.readFileSync(experimentsFilePath, 'utf8'));
-    res.json(experiments);
-    console.log(experiments)
-    console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
+// app.get('/experiments', (req, res) => {
+//   const experiments = JSON.parse(fs.readFileSync(experimentsFilePath, 'utf8'));
+//     res.json(experiments);
+//     console.log(experiments)
+//     console.log("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb")
 
+// });
+
+app.get('/experiments', (req, res) => {
+  try {
+    // Read the JSON file synchronously (can also use fs.promises for async)
+    const experimentsData = fs.readFileSync(experimentsFilePath, 'utf8');
+    const experiments = JSON.parse(experimentsData);
+    res.json(experiments);
+  } catch (error) {
+    console.error('Error reading experiments.json:', error);
+    res.status(500).json({ success: false, message: 'Error reading experiments file.' });
+  }
 });
 
 app.delete('/delete-experiment/:title', (req, res) => {
