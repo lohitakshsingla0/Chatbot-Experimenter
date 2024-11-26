@@ -20,6 +20,8 @@ function fetchExperiments() {
     fetch('/experiments')
         .then(response => response.json())
         .then(data => {
+
+            console.log(data.experiment)
             const experimentTopic = document.getElementById('experimentTopic');
             const deleteExperimentTopic = document.getElementById('deleteExperimentTopic');
             experimentTopic.innerHTML = '';
@@ -47,6 +49,8 @@ document.getElementById('experimentTopic').addEventListener('change', function()
     fetch('/experiments')
         .then(response => response.json())
         .then(data => {
+            console.log(data.experiment)
+
             const experiment = data.experiments.find(exp => exp.title === experimentTitle);
             const chatbotList = document.getElementById('chatbotList');
             chatbotList.innerHTML = '';
