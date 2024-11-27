@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve static files
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(bodyParser.json());
 
@@ -68,20 +68,20 @@ app.post('/send-email', (req, res) => {
 
 //Test
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'admin', 'index.html'));
 });
 
 // Routes for different chat interfaces
 app.get('/comparison/full-screen', (req, res) => {
-    res.sendFile(path.join(__dirname, 'comparison', 'full-screen', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'comparison', 'full-screen', 'index.html'));
 });
 
 app.get('/comparison/small-screen', (req, res) => {
-    res.sendFile(path.join(__dirname, 'comparison', 'small-screen', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'comparison', 'small-screen', 'index.html'));
 });
 
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'admin', 'index.html'));
 });
 
 // Orders data
