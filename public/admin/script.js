@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function fetchExperiments() {
-    fetch('/experiments')
+    fetch('/api/experiments')
         .then(response => response.json())
         .then(data => {
 
@@ -46,7 +46,7 @@ function fetchExperiments() {
 // Populate the chatbot list based on the selected experiment topic
 document.getElementById('experimentTopic').addEventListener('change', function() {
     const experimentTitle = this.value;
-    fetch('/experiments')
+    fetch('/api/experiments')
         .then(response => response.json())
         .then(data => {
             console.log(data)
@@ -103,7 +103,7 @@ function processAndSendEmails() {
         return;
     }
 
-    fetch('/experiments')
+    fetch('/api/experiments')
         .then(response => response.json())
         .then(data => {
             const experiment = data.experiments.find(exp => exp.title === experimentTopic);

@@ -323,7 +323,7 @@ app.post('/process-message', (req, res) => {
 // });
 
 
-app.get('/experiments', async (req, res) => {
+app.get('/api/experiments', async (req, res) => {
   try {
       const response = await fetch(experimentsFileUrl);
       if (!response.ok) {
