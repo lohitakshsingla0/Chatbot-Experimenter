@@ -1,10 +1,10 @@
 {
   "experiments": [
     {
-      "title": "Comparison of Chatbot Interfaces",
+      "title": "Comparison of Chatbot Innnnnnterfaces",
       "chatbots": [
         {
-          "name": "Full-Screen Chatbotttttttttttttt",
+          "name": "Full-Screen Chatbot",
           "link": "http://localhost:3000/comparison/full-screen/"
         },
         {
