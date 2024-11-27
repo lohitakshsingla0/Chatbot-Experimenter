@@ -1,9 +1,7 @@
 {
     "version": 2,
     "routes": [
+        { "src": "/experiments", "dest": "/api/experiments" },
         { "src": "/(.*)", "dest": "/public/$1" }
-    ],
-    "rewrites": [
-    { "source": "/experiments", "destination": "/api/experiments" }
-  ]
+    ]
 }
