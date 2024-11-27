@@ -1,8 +1,10 @@
 {
     "version": 2,
-
+    "builds": [
+        { "src": "server.js", "use": "@vercel/node" }
+    ],
     "routes": [
-        { "src": "/api/(.*)", "dest": "public/server.js" },
-        { "src": "/(.*)", "dest": "/public/$1" }
+        { "src": "/api/(.*)", "dest": "/server.js" },   // API routes
+        { "src": "/(.*)", "dest": "/public/$1" }       // Static files from public folder
     ]
 }
