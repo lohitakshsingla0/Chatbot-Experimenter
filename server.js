@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 
 // Store experiments in memory for simplicity (you can use a database or file for persistence)
 // const experimentsFilePath = path.join(__dirname, 'experiments.json');
-// const experimentsFilePath = path.join(__dirname,'data', 'experiments.json');
-const experimentsFilePath = path.join(process.cwd(), 'data', 'experiments.json');
+const experimentsFilePath = path.join(__dirname,'data', 'experiments.json');
+//const experimentsFilePath = path.join(process.cwd(), 'data', 'experiments.json');
 
 console.log('Experiments file absolute path:', experimentsFilePath);
 // Set up Nodemailer transporter
