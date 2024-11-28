@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const fetch = require('node-fetch'); // Import node-fetch for API calls
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,9 +15,9 @@ app.use(bodyParser.json());
 // Store experiments in memory for simplicity (you can use a database or file for persistence)
 // const experimentsFilePath = path.join(__dirname, 'experiments.json');
 // const experimentsFilePath = path.join(__dirname,'data', 'experiments.json');
-const experimentsFileUrl = 'https://raw.githubusercontent.com/lohitakshsingla0/Chatbot-Experimenter/refs/heads/main/data/experiments.json';
+const experimentsFilePath = path.join(process.cwd(), 'data', 'experiments.json');
 
-//console.log('Experiments file absolute path:', experimentsFilePath);
+console.log('Experiments file absolute path:', experimentsFilePath);
 // Set up Nodemailer transporter
 
 
@@ -60,9 +59,9 @@ app.post('/send-email', (req, res) => {
 
 
 // Ensure the experiments.json file exists
-// if (!fs.existsSync(experimentsFilePath)) {
-//     fs.writeFileSync(experimentsFilePath, JSON.stringify({ experiments: [] }, null, 2));
-// }
+if (!fs.existsSync(experimentsFilePath)) {
+    fs.writeFileSync(experimentsFilePath, JSON.stringify({ experiments: [] }, null, 2));
+}
 
 
 
@@ -323,19 +322,20 @@ app.post('/process-message', (req, res) => {
 // });
 
 
-app.get('/api/experiments', async (req, res) => {
+app.get('/experiments', (req, res) => {
   try {
-      const response = await fetch(experimentsFileUrl);
-      if (!response.ok) {
-          throw new Error('Failed to fetch experiments data from GitHub.');
-      }
-      const experiments = await response.json();
-      res.json(experiments);
+    // Use process.cwd() to dynamically resolve the path
+    const data = fs.readFileSync(experimentsFilePath, 'utf8');
+    const experiments = JSON.parse(data);
+
+    // Respond with the JSON data
+    res.json(experiments);
   } catch (error) {
-      console.error('Error fetching experiments.json:', error);
-      res.status(500).json({ success: false, message: 'Error fetching experiments data.' });
+    console.error('Error reading experiments.json:', error);
+    res.status(500).json({ success: false, message: 'Error reading experiments file.' });
   }
 });
+
 
 app.delete('/delete-experiment/:title', (req, res) => {
   const { title } = req.params;
