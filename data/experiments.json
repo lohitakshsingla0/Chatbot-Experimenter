@@ -50,6 +50,15 @@
           "link": "http://localhost:3000/AI/2"
         }
       ]
+    },
+    {
+      "title": "Normat Chatbot",
+      "chatbots": [
+        {
+          "name": "Chatbot 1",
+          "link": "http://localhost:3000/normal/chat1/"
+        }
+      ]
     }
   ]
 }
