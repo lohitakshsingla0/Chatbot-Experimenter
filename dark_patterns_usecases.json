@@ -1,0 +1,68 @@
+[
+    {
+        "source": "x.com",
+        "url": "https://x.com/DD_Moran/status/1796957930069037324",
+        "description": "Twitter bot is drawing a blank. UI for subscription options is off; options should be in the chatbot's response. Fix: Put options in chat response.",
+        "issue": "Chatbot error and misplaced subscription options."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/perryhewitt/status/1188434469293875201",
+        "description": "@verizonfios chatbot dark patterns on point.",
+        "issue": "Dark patterns in chatbot interactions."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/levelsio/status/1853108595627540666",
+        "description": "CannyHQ makes canceling subscriptions impossible; requires contacting support, which is an AI bot. FTC mandates Click-to-Cancel rule for ease of cancellation.",
+        "issue": "Illegal dark pattern preventing subscription cancellation."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/Mars53208096/status/1861750340904800628",
+        "description": "Subscription ended; chatbot fails to recognize images and lacks context window.",
+        "issue": "Chatbot functionality degraded after subscription ended."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/justin_schueler/status/1629960530206097411",
+        "description": "To cancel trial subscription, user must contact support. Process is lengthy and technically tricky.",
+        "issue": "Difficult cancellation process."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/wojtekszkutnik/status/1736372389653430358",
+        "description": "Adobe requires users to talk to support for cancellation; chat fails multiple times before allowing cancellation.",
+        "issue": "Repeated failures in cancellation process."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/hamburger317/status/1862888215084241348",
+        "description": "Chatbot folded under criticism from user.",
+        "issue": "Chatbot's poor handling of user criticism."
+    },
+    {
+        "source": "reddit",
+        "url": "https://www.reddit.com/r/assholedesign/comments/15bbkwy/atts_chatbot_pretends_to_not_be_able_to_hear_you/",
+        "description": "AT&T chatbot pretends to not hear the user.",
+        "issue": "Fake technical issues to avoid responding."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/christinmassey/status/1838688721010376731",
+        "description": "SIRIUSXM uses wild cancellation process with confusing promo offers to deter cancellation.",
+        "issue": "Confusing cancellation process."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/darkpatterns/status/1684829797615013888",
+        "description": "AT&T's chatbot pretends to not be able to 'hear' you.",
+        "issue": "Fake technical issues to avoid user requests."
+    },
+    {
+        "source": "x.com",
+        "url": "https://x.com/round/status/1402108762794594306",
+        "description": "Dark Patterns are intentional business decisions designed to exploit ambiguity.",
+        "issue": "General critique of dark patterns."
+    }
+]
