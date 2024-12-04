@@ -1,68 +1,162 @@
 [
     {
-        "source": "x.com",
-        "url": "https://x.com/DD_Moran/status/1796957930069037324",
-        "description": "Twitter bot is drawing a blank. UI for subscription options is off; options should be in the chatbot's response. Fix: Put options in chat response.",
-        "issue": "Chatbot error and misplaced subscription options."
+      "id": 1,
+      "url": "https://x.com/DD_Moran/status/1796957930069037324",
+      "text": "Twitter bot is drawing a blank here. The ultimate dark pattern? The app's UI for subscription options is off too. The user is engaging with a chat, so response options should be in the chatbot's response, where the user is expecting the response to appear.\n\nFix: put the options in the chat response, see my screen grab.\n\nI can't fix your chatbot error, though. At the very least system should detect no response being supplied and apologize"
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/perryhewitt/status/1188434469293875201",
-        "description": "@verizonfios chatbot dark patterns on point.",
-        "issue": "Dark patterns in chatbot interactions."
+      "id": 2,
+      "url": "https://x.com/perryhewitt/status/1188434469293875201",
+      "text": "Not unexpected, but @verizonfios is really on point with its chatbot dark patterns."
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/levelsio/status/1853108595627540666",
-        "description": "CannyHQ makes canceling subscriptions impossible; requires contacting support, which is an AI bot. FTC mandates Click-to-Cancel rule for ease of cancellation.",
-        "issue": "Illegal dark pattern preventing subscription cancellation."
+      "id": 3,
+      "url": "https://x.com/levelsio/status/1853108595627540666",
+      "text": "⚠️ So @cannyHQ has made it literally impossible for customers to cancel their subscription\n\nTo downgrade or cancel your subscription, they force you to contact their support:\n\n\"We'd love to know why your current plan isn't working for you. Please contact support to downgrade.\"\n\nBut their support is an AI bot that won't let you cancel your subscription!\n\nNice catch-22, and 100% illegal in the US and EU:\n\nThis tactic is usually used by companies who are losing MRR and try to force customers to stay. It's horrible and illegal but it works: the harder you make it to cancel, the lower % your churn goes, but of course all for the wrong reasons:\n\nRecently the @FTC has implemented the “Click-to-Cancel” rule, mandating that businesses make canceling subscriptions as straightforward as signing up. This rule prohibits companies from requiring consumers to contact support to cancel and applies to most subscription services\n\nI hate doing business with these kinds of companies\n\nSo I'm switching all my bug boards to @FeaturebaseHQ, they've been super responsive and don't use shady tactics like this"
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/Mars53208096/status/1861750340904800628",
-        "description": "Subscription ended; chatbot fails to recognize images and lacks context window.",
-        "issue": "Chatbot functionality degraded after subscription ended."
+      "id": 4,
+      "url": "https://x.com/Mars53208096/status/1861750340904800628",
+      "text": "My subscription ended today, WHY IS IT SUDDENLY SO DUMB? WHATEVER I SEND IT ITS NOT RECOGNISING IMAGES. AND ITS HAVING ZERO CONTEXT WINDOW, check the screenshots... So weird"
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/justin_schueler/status/1629960530206097411",
-        "description": "To cancel trial subscription, user must contact support. Process is lengthy and technically tricky.",
-        "issue": "Difficult cancellation process."
+      "id": 5,
+      "url": "https://x.com/justin_schueler/status/1629960530206097411",
+      "text": "Define dark pattern @TheEconomist\n\nI just wanted to cancel my trial subscription. To do that, I have to contact their support and tell them how my day is going. 5 min later, still no cancellation. Seems to be technically tricky…"
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/wojtekszkutnik/status/1736372389653430358",
-        "description": "Adobe requires users to talk to support for cancellation; chat fails multiple times before allowing cancellation.",
-        "issue": "Repeated failures in cancellation process."
+      "id": 6,
+      "url": "https://x.com/wojtekszkutnik/status/1736372389653430358",
+      "text": "As always, @Adobe taking dark cancellation patterns to the next level - not only you can cancel your subscriptions only by talking to support, now the chat will fail three times and keep ignoring you before they let you cancel, too"
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/hamburger317/status/1862888215084241348",
-        "description": "Chatbot folded under criticism from user.",
-        "issue": "Chatbot's poor handling of user criticism."
+      "id": 7,
+      "url": "https://x.com/hamburger317/status/1862888215084241348",
+      "text": "If you ever think you're sensitive, at least you didn't fold like this chatbot did when I criticized it"
     },
     {
-        "source": "reddit",
-        "url": "https://www.reddit.com/r/assholedesign/comments/15bbkwy/atts_chatbot_pretends_to_not_be_able_to_hear_you/",
-        "description": "AT&T chatbot pretends to not hear the user.",
-        "issue": "Fake technical issues to avoid responding."
+      "id": 8,
+      "url": "https://www.reddit.com/r/assholedesign/comments/15bbkwy/atts_chatbot_pretends_to_not_be_able_to_hear_you/",
+      "text": "AT&T's chatbot pretends to not be able to 'hear' you"
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/christinmassey/status/1838688721010376731",
-        "description": "SIRIUSXM uses wild cancellation process with confusing promo offers to deter cancellation.",
-        "issue": "Confusing cancellation process."
+      "id": 9,
+      "url": "https://x.com/christinmassey/status/1838688721010376731",
+      "text": "@darkpatterns Wild cancellation process from @SIRIUSXM.\n\nAfter clicking on link to Cancel & selecting the reason “Don’t listen enough,” user is presented w/ promo & given options to Go Back or Chat. Confusing enough that I closed out & started over…then submitted to chatting."
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/darkpatterns/status/1684829797615013888",
-        "description": "AT&T's chatbot pretends to not be able to 'hear' you.",
-        "issue": "Fake technical issues to avoid user requests."
+      "id": 10,
+      "url": "https://x.com/darkpatterns/status/1684829797615013888",
+      "text": "“AT&T's chatbot pretends to not be  able to 'hear' you”"
     },
     {
-        "source": "x.com",
-        "url": "https://x.com/round/status/1402108762794594306",
-        "description": "Dark Patterns are intentional business decisions designed to exploit ambiguity.",
-        "issue": "General critique of dark patterns."
+      "id": 11,
+      "url": "https://x.com/round/status/1402108762794594306",
+      "text": "“Dark Patterns” are not some occasional lapse in a designer’s “human-centered” design.\n\nThey are intentional, quantifiable, and enforceable business decisions designed specifically to exploit ambiguity."
+    },
+    {
+      "id": 12,
+      "url": "https://www.reddit.com/r/darkpatterns/comments/ubptf2/modern_milkman_to_cancel_you_must_to_chat_to_a/",
+      "text": "Modern Milkman: To cancel, you must to chat to a bot which attempts to guilt trip you for 5 messages."
+    },
+    {
+      "id": 13,
+      "url": "https://www.reddit.com/r/assholedesign/comments/104lm42/customer_support_chat_makes_you_wait_a_long_time/",
+      "text": "Customer support chat makes you wait a long time before any solution is provided but closes the chat if you’re inactive for too long."
+    },
+    {
+      "id": 14,
+      "url": "https://www.reddit.com/r/assholedesign/comments/wr0v7n/no_wait_time_on_chat_no_log_of_time_chatting/",
+      "text": "No wait time on chat, no log of time chatting, Though, they're \"here to help if you have questions\""
+    },
+    {
+      "id": 15,
+      "url": "https://www.reddit.com/r/assholedesign/comments/15g3hkk/lyca_live_chat_claims_internet_connectivity/#lightbox",
+      "text": "Lyca live chat claims internet connectivity issues, disconnects me, then claims that I'm not there"
+    },
+    {
+      "id": 16,
+      "url": "https://www.reddit.com/r/assholedesign/comments/13wjpsw/danish_postal_service_postnord_really_dont_want/",
+      "text": "Danish postal service (PostNord) really don't want you to contact them. You can call them within a 3 hour window every day and in order to chat with them you have to download their app, create an account and can't leave the app while waiting. The wait time is over an hour."
+    },
+    {
+      "id": 17,
+      "url": "Uber eats support intentionally \"misunderstanding\" an issue and closing the chat when called out",
+      "text": "Uber eats support intentionally \"misunderstanding\" an issue and closing the chat when called out"
+    },
+    {
+      "id": 18,
+      "url": "https://www.reddit.com/r/assholedesign/comments/1fkzyrl/this_is_the_epitome_of_asshole_design/",
+      "text": "This is the epitome of asshole design.\nI removed it already when I was able to, and it reappeared miraculously. Looks like snapchat knows that people hate Snapchat AI and made it so that to REMOVE a feature they forcefully add, you must be a subscriber. I hate this. I hate this direction. I hate everything about it. It is shameless. And it is progressing steadily toward an episode of black mirror."
+    },
+    {
+      "id": 19,
+      "url": "https://www.reddit.com/r/assholedesign/comments/114g4bw/new_york_times_requires_you_to_chat_with_a_care/",
+      "text": "New York Times requires you to chat with a \"Care Advocate\" to cancel your subscription"
+    },
+    {
+      "id": 20,
+      "url": "https://www.reddit.com/r/assholedesign/comments/15glycq/so_bing_closes_the_chat_when_you_ask_why_there_is/",
+      "text": "So, bing closes the chat when you ask why there is an ad on his answers, if this isn't an asshole move I don't know what"
+    },
+    {
+      "id": 21,
+      "url": "https://www.reddit.com/r/assholedesign/comments/180r8st/sony_requires_you_to_solve_ten_puzzles_to_chat/",
+      "text": "Sony requires you to solve TEN puzzles to chat with a representative for refunds. Even better, after all ten are done, they “run into issues” and can’t connect you."
+    },
+    {
+      "id": 22,
+      "url": "https://www.reddit.com/r/assholedesign/comments/r5hmnu/good_old_spectrum_support_used_the_chat_and_got/",
+      "text": "Good old spectrum support. Used the chat and got nowhere. The listed supported modem isn't supported apparently. Call them and get a script for 2 hours before you talk to someone who does nothing for you."
+    },
+    {
+      "id": 23,
+      "url": "https://www.reddit.com/r/assholedesign/comments/10y59rz/attempting_to_cancel_xfinity_via_chathow_expected/",
+      "text": "Attempting to cancel Xfinity via chat...how expected."
+    },
+    {
+      "id": 24,
+      "url": "https://reddit.com/r/assholedesign/comments/19bp3ja/i_wanted_to_try_free_month_of_the_economist_then/",
+      "text": "I wanted to try free month of The Economist, then I immediately headed to cancel it so I won't get charged next month and I have to use live chat in order to do that. It took more than 1 HOUR chatting with employee to finally cancel it. I will never support them."
+    },
+    {
+      "id": 25,
+      "url": "https://www.reddit.com/r/assholedesign/comments/1ebrfv6/congrats_amazon_for_building_a_chatbot_that/",
+      "text": "Congrats Amazon, for building a chatbot that doesn't even let people type."
+    },
+    {
+      "id": 26,
+      "url": "https://www.reddit.com/r/assholedesign/comments/k6kz8b/live_chat_that_does_not_go_away_when_closed/",
+      "text": "Live chat that does not go away when closed."
+    },
+    {
+      "id": 27,
+      "url": "https://www.reddit.com/r/assholedesign/comments/v81hsr/twitch_suddenly_forcing_users_to_give_their_phone/",
+      "text": "Twitch suddenly forcing users to give their phone number in order to be able to chat-this is on one account, and happens to EVERY channel's chat"
+    },
+    {
+      "id": 28,
+      "url": "https://www.reddit.com/r/assholedesign/comments/di5haq/adobe_does_not_let_you_cancel_your_subscription/",
+      "text": "Adobe does not let you cancel your subscription. You have to go to a customer support chat and they do it for you. (And they don't do it right away)"
+    },
+    {
+      "id": 29,
+      "url": "https://www.reddit.com/r/assholedesign/comments/114qeae/cant_cancel_geico_insurance_without_chatting_with/",
+      "text": "Can’t cancel Geico insurance without chatting with an agent. NEVER USING GEICO AGAIN"
+    },
+    {
+      "id": 30,
+      "url": "https://www.reddit.com/r/assholedesign/comments/nxy28x/waited_for_50_min_and_then_given_a_6_second_window/",
+      "text": "Waited for 50 min and then given a 6 second window"
+    },
+    {
+      "id": 31,
+      "url": "https://www.reddit.com/r/assholedesign/comments/lnda8l/before_buying_a_nyt_subscription_heres_what_itll/",
+      "text": "Before buying a NYT subscription, here's what it'll take to cancel it"
+    },
+    {
+      "id": 32,
+      "url": "https://www.reddit.com/r/assholedesign/comments/12yxme4/snapchat_has_added_and_ai_that_is_permanently/",
+      "text": "Snapchat has added and AI that is permanently pinned to the top of my chat feed. It cannot be removed or unpinned without paying for Snapchat+"
     }
-]
+  ]
