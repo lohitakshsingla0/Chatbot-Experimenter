@@ -222,5 +222,145 @@
       "url": "https://www.reddit.com/r/assholedesign/comments/12yxme4/snapchat_has_added_and_ai_that_is_permanently/",
       "description": "Snapchat adds an AI permanently pinned to chats, removable only with a subscription.",
       "issue": "Feature removal requires payment, affecting user experience."
-    }
+    },
+    {
+      "id": 33,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/100rb5f/sirius_xm_wont_let_you_cancel_online_unless_you/",
+      "description": "Sirius XM won't let you cancel online unless you chat with a live agent or call them.",
+      "issue": "Forced interaction with live agents for cancellations."
+  },
+  {
+      "id": 34,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/11l1paa/rogers_telecom_pushes_you_to_use_the_online/",
+      "description": "Rogers (telecom) pushes you to use the online chatbot instead of calling, but won't place you in a live chat queue because all agents are currently busy, which is the entire purpose of a queue...",
+      "issue": "Unavailable chat agents while discouraging alternative support options."
+  },
+  {
+      "id": 35,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/c6iksy/dpd_delivery_company_chat_bot_pretends_to_be_a/",
+      "description": "DPD Delivery company chatbot pretends to be a human & lies about delivery info!",
+      "issue": "Chatbot impersonates humans and provides misleading information."
+  },
+  {
+      "id": 36,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/114qeae/cant_cancel_geico_insurance_without_chatting_with/",
+      "description": "Can’t cancel Geico insurance without chatting with an agent. NEVER USING GEICO AGAIN.",
+      "issue": "Mandating chat with agents for simple cancellations."
+  },
+  {
+      "id": 37,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/a75n6g/nyt_digital_wants_you_to_chat_with_their_customer/",
+      "description": "NYT digital wants you to chat with their customer care representative to cancel your subscription. It took me 15-20 minutes to get my subscription canceled.",
+      "issue": "Lengthy chat interactions required for cancellations."
+  },
+  {
+      "id": 38,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/v8ze75/new_york_times_making_it_a_royal_pain_to_cancel/",
+      "description": "New York Times making it a royal pain to cancel subscription - forcing me to call or chat to cancel, and waiting to 'chat' for more than an hour with zero response.",
+      "issue": "Prolonged cancellation process via chat or call."
+  },
+  {
+      "id": 39,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/y0aio2/keep_the_app_open_for_an_hour_to_chat_with_a/",
+      "description": "Keep the app open for an hour to chat with a customer representative...",
+      "issue": "Requiring long app usage for basic support."
+  },
+  {
+      "id": 40,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/1dxbqmc/xfinity_wifi_hotspot_now_pass_claims_you_can/",
+      "description": "Xfinity Wifi hotspot now pass claims you can connect 2 devices with one purchase but doesn’t work. Support connects to a phone number with long wait times and a live chat page that never connects you to an agent.",
+      "issue": "Unresponsive support systems for resolving connectivity issues."
+  },
+  {
+      "id": 41,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/1gt5s2w/this_scammy_runaround_from_the_postmates_app_is/",
+      "description": "Postmates app chat agents mislead users, give false answers, and eventually end chats with no resolution.",
+      "issue": "Misleading chat agents leading to unresolved issues."
+  },
+  {
+      "id": 42,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/7y1n05/flowkey_cancel_subscription_only_via_chat_time_to/",
+      "description": "Flowkey: cancel subscription only via chat. 'Time to response: usually one day'",
+      "issue": "Extremely delayed responses for subscription cancellations."
+  },
+  {
+      "id": 43,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/11jv71o/you_must_opt_in_for_their_promotion_messages_in/",
+      "description": "You must opt in for their promotion messages in order to use their customer service chat.",
+      "issue": "Forcing users to opt-in to promotions for support access."
+  },
+  {
+      "id": 44,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/ze5adj/inconsistent_check_boxes_to_trick_users/",
+      "description": "Inconsistent checkboxes are used to trick users.",
+      "issue": "Deceptive checkbox design to mislead users."
+  },
+  {
+      "id": 45,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/ajkmg2/you_have_to_pay_to_unlock_messages_the_price_for/",
+      "description": "You have to pay to unlock messages, the price for a month is $40.",
+      "issue": "Paywall imposed on unlocking messages."
+  },
+  {
+      "id": 46,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/12x3wxz/some_customer_service_bots_dont_even_try_just/",
+      "description": "Some customer service bots don’t even try... just give me a person ffs.",
+      "issue": "Unhelpful bots failing to resolve issues."
+  },
+  {
+      "id": 47,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/wmffym/air_asia_customer_support_bot_takes_sweet_ass/",
+      "description": "Air Asia customer support bot takes a long time to respond to pre-selected prompts to imitate an actual person.",
+      "issue": "Simulated responses with significant delays."
+  },
+  {
+      "id": 48,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/13de552/tmobile_basically_saying_they_will_include_ads_in/",
+      "description": "Tmobile basically saying they will include ads in a customer support chat.",
+      "issue": "Insertion of advertisements in customer support interactions."
+  },
+  {
+      "id": 49,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/v6btca/google_ads_is_running_a_bot_called_a_live_agent/",
+      "description": "Google Ads is running a bot called 'A Live Agent' as its only live support option. It is fully scripted, redirecting users to the same web form.",
+      "issue": "Scripted bot redirecting users to ineffective support forms."
+  },
+  {
+      "id": 50,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/y789xg/trying_to_ask_lenovo_support_if_theyre_launching/",
+      "description": "Lenovo support bot won’t let users proceed without providing personal information like name, phone, and email.",
+      "issue": "Mandatory personal information required for basic support."
+  },
+  {
+      "id": 51,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/kaqugu/deliveroo_went_down_and_when_it_finally_started/",
+      "description": "Deliveroo chat queue with 2000+ people, and the chat closes if no response is received, forcing users to start over.",
+      "issue": "Chat queues with abrupt closures and no resolutions."
+  },
+  {
+      "id": 52,
+      "source": "reddit.com",
+      "url": "https://www.reddit.com/r/assholedesign/comments/kaqugu/deliveroo_went_down_and_when_it_finally_started/",
+      "description": "Deliveroo went down, and when chat restarted, the user was left waiting with no resolution.",
+      "issue": "Service downtime causing unresolved support issues."
+  }
   ]
